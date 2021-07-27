@@ -9,7 +9,7 @@ const data = [
   },
   {
     originURL: 'https://www.youtube.com/',
-    shortenURL: 'http://localhost:3000/9c7A4',
+    shortenURL: 'http:///nameless-shelf-45002.herokuapp.com/9c7A4',
     urlCode: '9c7A4'
   }
 ]
