@@ -4,7 +4,7 @@ const exphbs = require('express-handlebars')
 const routes = require('./routes')
 
 const app = express()
-const port = 3000
+const PORT = process.env.PORT || 3000
 
 require('./config/mongoose')
 
@@ -16,5 +16,5 @@ app.use(routes)
 
 // listening server
 app.listen(port, () => {
-  console.log(`The server is running on http://localhost:${port}`)
+  console.log(`The server is running on http://localhost:${PORT}`)
 })
