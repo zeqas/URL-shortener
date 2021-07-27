@@ -61,7 +61,10 @@ router.get('/:id', (req, res) => {
   // 將 urlCode 設為 req.params.id
   const urlCode = req.params.id
   // console.log(urlCode)
-  
+
+  // 不曉得這行程式碼的作用，但移除後會有錯誤 (originURL = "null")
+  if (urlCode === 'favicon.ico') return res.redirect('/')
+
   return URL.findOne({ urlCode })
     .lean()
     .then(url => {
